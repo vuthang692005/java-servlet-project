@@ -1,14 +1,17 @@
 package com.example;
 
-import jakarta.servlet.http.*;
-import jakarta.servlet.ServletException;
-import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
-
-import java.io.*;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.StringWriter;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.mockito.Mockito.*;
+import org.junit.jupiter.api.Test;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 class HelloServletTest {
 
@@ -32,7 +35,7 @@ class HelloServletTest {
         printWriter.flush(); // Ensure everything is written to the StringWriter
         String output = stringWriter.toString();
 
-        assertTrue(output.contains("Chào mừng bạn đến với dự án Java Servlet!"));
+        assertTrue(output.contains("Chào mừng bạn đến với dự án Java Servlet của chúng tôi!"));
         assertTrue(output.contains("<h1>"));
         assertTrue(output.contains("</html>"));
     }
