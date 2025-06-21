@@ -19,7 +19,7 @@ public class HelloServlet extends HttpServlet {
         out.println("<html>");
         out.println("<head><title>Xin chào</title></head>");
         out.println("<body>");
-        out.println("<h1>Chào mừng bạn đến với dự án Java Servlet!</h1>");
+        out.println("<h1>Chào mừng bạn đến với dự án Java Servlet của chúng tôi!</h1>");
         out.println("<p>Đây là một ví dụ đơn giản về cách sử dụng Servlet.</p>");
         out.println("</body>");
         out.println("</html>");
